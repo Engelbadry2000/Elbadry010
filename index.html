@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البدري للتكنولوجيا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loginContainer" class="modal">
+        <div class="modal-content">
+            <h2>تسجيل الدخول</h2>
+            <input type="password" id="password" placeholder="كلمة المرور" required>
+            <button onclick="togglePassword()">عرض كلمة المرور</button>
+            <button onclick="login()">تسجيل الدخول</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>البدري للتكنولوجيا</h1>
+        <nav>
+            <a href="#search">بحث ذاتي</a>
+            <a href="#resume">إنشاء سيرة ذاتية</a>
+            <a href="#ai-tools">أدوات الذكاء الاصطناعي</a>
+        </nav>
+    </header>
+
+    <section id="search" class="section">
+        <h2>بحث ذاتي</h2>
+        <input type="text" id="searchQuery" placeholder="ابحث هنا ...">
+        <button onclick="performSearch()">بحث</button>
+        <div id="results"></div>
+    </section>
+
+    <section id="resume" class="section">
+        <h2>إنشاء سيرة ذاتية</h2>
+        <p>يمكنك استخدام أداة الذكاء الاصطناعي المجانية لإنشاء سيرتك الذاتية.</p>
+        <button onclick="openResumeTool()">فتح أداة إنشاء السيرة الذاتية</button>
+        <div id="resumeOutput"></div>
+    </section>
+
+    <section id="ai-tools" class="section">
+        <h2>أدوات الذكاء الاصطناعي المجانية</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>اسم الأداة</th>
+                    <th>الرابط</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MATLAB</td>
+                    <td>بيئة البرمجة والتطوير للرياضيات والهندسة.</td>
+                    <td><a href="https://www.mathworks.com/products/matlab.html" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Beautiful AI</td>
+                    <td>أداة لإنشاء عروض تقديمية جميلة.</td>
+                    <td><a href="https://www.beautiful.ai/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>ILovePDF</td>
+                    <td>أداة لتحويل وتعديل ملفات PDF.</td>
+                    <td><a href="https://www.ilovepdf.com/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>ChatGPT</td>
+                    <td>أداة للدردشة وتوليد النصوص باستخدام الذكاء الاصطناعي.</td>
+                    <td><a href="https://chat.openai.com/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Canva</td>
+                    <td>أداة تصميم جرافيكي سهلة الاستخدام.</td>
+                    <td><a href="https://www.canva.com/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Google Colab</td>
+                    <td>بيئة تطوير سحابية لتشغيل أكواد Python.</td>
+                    <td><a href="https://colab.research.google.com/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Hugging Face</td>
+                    <td>منصة لتطوير نماذج التعلم العميق.</td>
+                    <td><a href="https://huggingface.co/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>IBM Watson</td>
+                    <td>خدمات الذكاء الاصطناعي من IBM.</td>
+                    <td><a href="https://www.ibm.com/watson" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>OpenAI API</td>
+                    <td>API لتطبيقات الذكاء الاصطناعي.</td>
+                    <td><a href="https://openai.com/api/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Microsoft Azure AI</td>
+                    <td>خدمات الذكاء الاصطناعي من مايكروسوفت.</td>
+                    <td><a href="https://azure.microsoft.com/en-us/services/cognitive-services/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>DataRobot</td>
+                    <td>أداة لتطوير نماذج التعلم الآلي.</td>
+                    <td><a href="https://www.datarobot.com/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Clarifai</td>
+                    <td>منصة للتعرف على الصور والفيديو باستخدام الذكاء الاصطناعي.</td>
+                    <td><a href="https://www.clarifai.com/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Runway ML</td>
+                    <td>أداة لإنشاء الوسائط المتعددة باستخدام الذكاء الاصطناعي.</td>
+                    <td><a href="https://runwayml.com/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>DeepAI</td>
+                    <td>منصة لتحويل النصوص إلى صور باستخدام الذكاء الاصطناعي.</td>
+                    <td><a href="https://deepai.org/" target="_blank">زيارة</a></td>
+                </tr>
+                <tr>
+                    <td>Zapier</td>
+                    <td>أداة لأتمتة العمليات باستخدام الذكاء الاصطناعي.</td>
+                    <td><a href="https://zapier.com/" target="_blank">زيارة</a></td>
+                </tr>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
